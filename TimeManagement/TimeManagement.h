@@ -3,6 +3,9 @@ TimeManagement.h - TimeManagement library
 J. Parisot
 */
 
+#ifndef TIME_MANAGEMENT_H
+#define TIME_MANAGEMENT_H
+
 /* Useful Constants */
 #define SECS_PER_MIN  60
 #define SECS_PER_HOUR 3600
@@ -28,3 +31,5 @@ class TimeManagement
 		int second();
 		long getTime();
 };
+
+#endif

@@ -1,5 +1,5 @@
 # arduino_libs
-Personal Libs developped for the Arduino
+Personal Libs developped/adapted for the Arduino
 
 
 -----------------------
@@ -7,12 +7,25 @@ Personal Libs developped for the Arduino
 Contains:
 
 - TimeManagement library:
-	Based on arduino micros()
-	provide interfaces to set Time and retreive it
+	- Based on arduino micros()
+	- provide interfaces to set Time and retreive it
 	
-- Alarm library:
-	Implementation of basics of an alarm clock:
+- Alarm library: implementation of basics of an alarm clock
 	- set alarm
 	- enable/disable
 	- snooze
 	- given current time in sec (from Monday 0AM = 0s), return the alarm state
+
+- LiquidCrystal_I2C:
+	- Class alowing to write on a LCD screen through I2C
+	- use <Wire.h>
+
+- SimpleFIFO: by Alexander Brevig
+	- non volatile allocation
+	- dequeue / enqueue features
+	- peek feature
+	- flush feature
+
+- Timer: Basic timer implementation
+	- start / stop features
+	- do not use interruption, should be polled to trigger the actions

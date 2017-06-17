@@ -13,6 +13,7 @@
     value=0;
     delayValue=5*60; //5mn
     currentValue=0;
+    activated = 0;
 }
   void Alarm::disable(){
     state=0;

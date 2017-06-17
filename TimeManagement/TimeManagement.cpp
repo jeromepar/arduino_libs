@@ -36,36 +36,38 @@ long TimeManagement::setTime(long seconds){
 	time_ref_s=micros()/1000000-seconds;
 	time_second_ref_ms=0;
 	
-	return(time_ref_s-previous_time_ref_s)
+	return(time_ref_s-previous_time_ref_s);
 } //from the start of the week (Moonday 00h00)
 
 char* TimeManagement::day(){
-int day=(((micros()/1000000-time_ref_s)%SECS_PER_WEEK)/(SECS_PER_DAY));
-switch(day)
-{
-  case 0:
-  return("Monday");
-  break;
-  case 1:
-  return("Tuesday");
-  break;
-  case 2:
-  return("Wednesday");
-  break;
-  case 3:
-  return("Thursday");
-  break;
-  case 4:
-  return("Friday");
-  break;
-  case 5:
-  return("Saturday");
-  break;
-  case 6:
-  return("Sunday");
-  break;
+	int day=(((micros()/1000000-time_ref_s)%SECS_PER_WEEK)/(SECS_PER_DAY));
+	switch(day)
+	{
+	case 0:
+		return("Monday");
+		break;
+	case 1:
+		return("Tuesday");
+		break;
+	case 2:
+		return("Wednesday");
+		break;
+	case 3:
+		return("Thursday");
+		break;
+	case 4:
+		return("Friday");
+		break;
+	case 5:
+		return("Saturday");
+		break;
+	case 6:
+		return("Sunday");
+		break;
+	}
+	return("Error_not_found");
 }
-}
+
 int TimeManagement::hour(){
 return(((micros()/1000000-time_ref_s)%SECS_PER_DAY)/(SECS_PER_HOUR));
 }

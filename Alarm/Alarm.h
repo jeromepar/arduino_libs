@@ -1,4 +1,8 @@
+#ifndef ALARM_H
+#define ALARM_H
+
 #define SECS_PER_WEEK  604800
+#define SECS_PER_DAY   86400
 
 
 class Alarm
@@ -25,3 +29,5 @@ class Alarm
 	  long delayValue;
 	  long timeInSec(int hour, int minute);
 };
+
+#endif
