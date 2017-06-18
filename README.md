@@ -29,3 +29,10 @@ Contains:
 - Timer: Basic timer implementation
 	- start / stop features
 	- do not use interruption, should be polled to trigger the actions
+	
+- TiltSensor : easy watch of a digital tilt_sensor
+	- detect tilts (debounce fuction)
+	- count tilts happening in a row
+	
+- CyclicTimer : provide an easy way to execute periodic actions
+	- provide the test for an "if" function
