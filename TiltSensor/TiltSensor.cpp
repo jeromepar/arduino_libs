@@ -27,7 +27,7 @@ boolean TiltSensor::watch(int in_value, int *count_OUT) {
 	boolean is_result = false;
 	*count_OUT = 0;
 
-	if(in_value == TRIGGERING_VALUE)
+	if(in_value == TILT_TRIGGERING_VALUE)
 	{
 		time_when_last_tilted = millis();
 		if(has_been_triggered == false) {

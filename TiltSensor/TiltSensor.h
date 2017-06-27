@@ -9,7 +9,7 @@
 #define SET_DOWN_TIME 100
 #define MAX_TIME_BETWEEN_COUNTS	400
 
-#define TRIGGERING_VALUE	LOW
+#define TILT_TRIGGERING_VALUE	LOW
 
 //#define VERBOSE
 
@@ -17,7 +17,7 @@ class TiltSensor
 {
 	public:
 		TiltSensor();
-		boolean TiltSensor::watch(int in_value, int *count_OUT);
+		boolean watch(int in_value, int *count_OUT);
 	private:
 		boolean has_been_triggered;
 		boolean i_am_still_counting_tilts;

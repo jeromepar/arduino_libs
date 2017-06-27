@@ -11,7 +11,7 @@ class CyclicTimer
 {
 	public:
 		CyclicTimer(unsigned long delayms_IN);
-		boolean CyclicTimer::watch();
+		boolean watch();
 	private:
 		unsigned long delay;
 		unsigned long lastWaking;
