@@ -86,6 +86,7 @@ long TimeManagement::timeInSec(int day, int hour, int minute, int second){
   return(sec);
 }
 
+/* return the time in second */
 long TimeManagement::getTime() {
   return((micros()/(long)1000000-time_ref_s));
 }
