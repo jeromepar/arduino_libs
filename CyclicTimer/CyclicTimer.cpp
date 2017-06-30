@@ -19,7 +19,7 @@ CyclicTimer::CyclicTimer(unsigned long delayms_IN){
 	lastWaking = 0;
 }
 
-boolean CyclicTimer::watch(){
+bool CyclicTimer::watch(){
 	unsigned long time = millis();
 	if (time-lastWaking > delay){
 		lastWaking= time;
