@@ -14,7 +14,7 @@ class Timer
 public:
 	Timer(void (*function)());
 
-	void start(unsigned long delay);
+	void start(unsigned long delay_ms);
 	void stop();
 	bool watch();
 private:
