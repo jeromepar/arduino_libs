@@ -23,7 +23,7 @@ class TimeManagement
 		TimeManagement();
 		bool newSec();
 		long setTime(long seconds); //from the start of the week (Moonday 00h00) return the gap in s
-		long timeInSec(int day, int hour, int minute, int second);
+		long timeInSec(long day, long hour, long minute, long second);
 		char* day();
 		int hour();
 		int hour12();

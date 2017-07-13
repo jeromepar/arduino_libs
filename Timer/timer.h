@@ -17,6 +17,7 @@ public:
 	void start(unsigned long delay_ms);
 	void stop();
 	bool watch();
+	bool is_active();
 private:
 	bool is_activated;
 	unsigned long EndDate;

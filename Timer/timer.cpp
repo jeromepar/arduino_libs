@@ -47,3 +47,8 @@ bool Timer::watch()
 
  return(output);
 }
+
+bool Timer::is_active()
+{
+	return (is_activated && (millis()<EndDate) );
+}

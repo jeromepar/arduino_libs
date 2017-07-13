@@ -17,7 +17,7 @@ class Alarm
 	  void setDelayValue(long sec);
 	  void stopAlarm();
 	  void delayAlarm();
-	  bool is_ringing(long currentTime);
+	  bool is_ringing(long currentTime, long maxSecRinging);
 	  
   private:
 	  int activated;
