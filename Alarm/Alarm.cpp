@@ -54,10 +54,10 @@ void Alarm::delayAlarm(){
 	}
 }
 
-bool Alarm::is_ringing(long currentTime){
+bool Alarm::is_ringing(long currentTime,long maxSecRinging){
   if((state==0) || ((currentTime%SECS_PER_DAY)<currentValue)) {
     return 0;
-  }else if ( (currentTime%SECS_PER_DAY)>=currentValue + 10 ) { // the application got 10s to query the state. after that time is past
+  }else if ( (currentTime%SECS_PER_DAY)>=currentValue + maxSecRinging ) { // the application got maxSecRinging sec to query the state. after that time is past
 	return 0;
   }else {
     return 1;

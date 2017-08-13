@@ -25,7 +25,7 @@ void Timer::start(unsigned long delay_ms)
 {
 	is_activated = true;
 	EndDate=millis()+delay_ms;
-	
+
 }
 
 void Timer::stop()
@@ -36,14 +36,21 @@ void Timer::stop()
 
 bool Timer::watch()
 {
-  bool output = false;
+	bool output = false;
 
 	if (is_activated && (millis()>EndDate) )
- {
-		f();
-    output=true;
-    this->stop();
- }
+	{
+		if (f != NULL){
+			f();
+		}
+		output=true;
+		this->stop();
+	}
 
- return(output);
+	return(output);
+}
+
+bool Timer::is_active()
+{
+	return (is_activated && (millis()<EndDate) );
 }
